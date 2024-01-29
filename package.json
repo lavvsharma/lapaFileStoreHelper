@@ -1,0 +1,23 @@
+{
+  "name": "lapafilestorehelper",
+  "version": "0.0.1",
+  "description": "File store helper for personal server.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "",
+    "dev": "tsc && node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lavvsharma/lapaFileStoreHelper"
+  },
+  "author": "Lav Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lavvsharma/lapaFileStoreHelper/issues"
+  },
+  "homepage": "https://github.com/lavvsharma/lapaFileStoreHelper#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
