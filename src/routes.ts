@@ -2,8 +2,8 @@ import config from "./utils/config";
 
 const uploadFile = async (
   file: any,
-  filePurpose: string,
-  systemRelativePath: string
+  filePurpose?: string,
+  systemRelativePath?: string
 ): Promise<any> => {
   try {
     /* 
@@ -14,11 +14,24 @@ const uploadFile = async (
     const formData = new FormData();
 
     formData.append("file", file);
-    formData.append("file_purpose", filePurpose || "");
-    formData.append(
-      "system_relative_path",
-      systemRelativePath || "others/misc"
-    );
+
+    // If filePurpose is null/undefined/empty do not add in the final formData
+    if (
+      filePurpose !== undefined &&
+      filePurpose !== null &&
+      filePurpose !== ""
+    ) {
+      formData.append("file_purpose", filePurpose);
+    }
+
+    // If systemRelativePath is null/undefined/empty do not add in the final formData
+    if (
+      systemRelativePath !== undefined &&
+      systemRelativePath !== null &&
+      systemRelativePath !== ""
+    ) {
+      formData.append("system_relative_path", systemRelativePath);
+    }
 
     // Initiate the fetch request
     const response = await fetch(`${config.lapaFileStoreUrl}/upload_file`, {
