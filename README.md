@@ -19,5 +19,10 @@ file store helper for personal server.
 
 - uploadFile() function is used for uploading the file to OSS with the help of lapaFileStoreUrl, file, filePurpose and systemRelativePath.
 - downloadFile() function is used for downloading the file from the OSS with the help of lapaFileStoreUrl and fileStorageToken.
+- index.ts moved outside src folder.
+- package.json updated.
+- .DS_Store added in .gitignore.
+- Config.ts added for lapaFileStoreUrl.
+- example.ts updated.
 
 ## Feedback is appreciated. Thank you!
