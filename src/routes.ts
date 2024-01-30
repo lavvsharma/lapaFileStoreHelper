@@ -1,5 +1,6 @@
+import config from "./utils/config";
+
 const uploadFile = async (
-  lapaFileStoreUrl: string,
   file: any,
   filePurpose: string,
   systemRelativePath: string
@@ -20,7 +21,7 @@ const uploadFile = async (
     );
 
     // Initiate the fetch request
-    const response = await fetch(`${lapaFileStoreUrl}/upload_file`, {
+    const response = await fetch(`${config.lapaFileStoreUrl}/upload_file`, {
       method: "POST",
       body: formData,
     });
@@ -48,7 +49,7 @@ const downloadFile = async (
 ): Promise<{ blob: Blob; filename: string }> => {
   try {
     console.log(
-      `Input: lapaFileStoreUrl - ${lapaFileStoreUrl}, fileStorageToken - ${fileStorageToken}`
+      `Input: lapaFileStoreUrl - ${config.lapaFileStoreUrl}, fileStorageToken - ${fileStorageToken}`
     );
 
     // Initialize the download_file URL for lapa-file-store
