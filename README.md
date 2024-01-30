@@ -24,5 +24,6 @@ file store helper for personal server.
 - .DS_Store added in .gitignore.
 - Config.ts added for lapaFileStoreUrl.
 - example.ts updated.
+- Optional validation added for variables in uploadFile() function.
 
 ## Feedback is appreciated. Thank you!
