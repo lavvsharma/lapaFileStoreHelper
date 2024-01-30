@@ -1,3 +1,3 @@
-import { uploadFile, downloadFile } from "lapaFileStoreHelper/src/routes";
+import { uploadFile, downloadFile } from "lapaFileStoreHelper";
 uploadFile();
 downloadFile();
