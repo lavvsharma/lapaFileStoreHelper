@@ -57,7 +57,6 @@ const uploadFile = async (
 };
 
 const downloadFile = async (
-  lapaFileStoreUrl: string,
   fileStorageToken: string
 ): Promise<{ blob: Blob; filename: string }> => {
   try {
@@ -66,7 +65,7 @@ const downloadFile = async (
     );
 
     // Initialize the download_file URL for lapa-file-store
-    const lapaFileStoreDownloadUrl = `${lapaFileStoreUrl}/download_file?file_storage_token=${fileStorageToken}`;
+    const lapaFileStoreDownloadUrl = `${config.lapaFileStoreUrl}/download_file?file_storage_token=${fileStorageToken}`;
     const response = await fetch(lapaFileStoreDownloadUrl);
 
     if (response.status == 200) {
