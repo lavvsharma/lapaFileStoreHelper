@@ -25,5 +25,8 @@ file store helper for personal server.
 - Config.ts added for lapaFileStoreUrl.
 - example.ts updated.
 - Optional validation added for variables in uploadFile() function.
+- example updated in index.ts
+- workflow added for publishing to npm
+- Function downloadFile() argument updated.
 
 ## Feedback is appreciated. Thank you!
