@@ -10,7 +10,7 @@
 //   return file;
 // };
 
-// uploadFile(createSampleFile(), "", "");
+// uploadFile(createSampleFile());
 // downloadFile("37007e8d-ef6e-4125-82bb-8371425245f7");
 
 export * from "./src/routes";
